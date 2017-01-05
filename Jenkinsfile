@@ -13,6 +13,6 @@ node {
     }
 
     stage('PSR-2 Standards') {
-        sh 'vendor/bin/phpcs -h --standard=PSR2 ./src'
+        sh 'phpcs --standard=PSR2 src/'
     }
 }
