@@ -10,7 +10,7 @@ class Library
 
     public function __construct($foo)
     {
-         $this->breaks = $foo;
+        $this->breaks = $foo;
         $this->foo = $foo;
         $this->bar = $foo;
     }
@@ -23,5 +23,9 @@ class Library
     public function fnTwo()
     {
         return 'Two';
+    }
+
+    public function iShouldBreak() {
+        return 'x';
     }
 }
