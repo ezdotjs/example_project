@@ -1,0 +1,11 @@
+{
+    "name": "contentdiscovered/example",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Kriss Cox",
+            "email": "kc@contentdiscovered.com"
+        }
+    ],
+    "require": {}
+}
