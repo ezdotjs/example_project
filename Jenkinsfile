@@ -9,7 +9,7 @@ node {
     }
 
     stage('Run Tests') {
-        sh 'vendor/bin/phpunit'
+        sh 'vendor/bin/phpunit tests'
     }
 
     stage('PSR-2 Standards') {
