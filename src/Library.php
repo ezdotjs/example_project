@@ -25,7 +25,8 @@ class Library
         return 'Two';
     }
 
-    public function iShouldBreak() {
+    public function iShouldBreak()
+    {
         return 'x';
     }
 }
