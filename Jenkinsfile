@@ -1,4 +1,8 @@
 node {
+    stage('Checkout') {
+        checkout scm
+    }
+
     stage('Provision') {
         sh 'composer install'
         sh 'yarn install'
