@@ -1,13 +1,14 @@
 node {
-    stage 'Checkout'
+    stage('Provision') {
+        sh 'composer install'
+        sh 'yarn install'
+    }
 
-    git credentialsId: '', url: ''
+    stage('Run Tests') {
+        sh 'vendor/bin/phpunit'
+    }
 
-    stage 'Install dependencies'
-
-    sh 'composer install'
-
-    stage 'Run tests'
-
-    sh 'vendor/bin/phpunit'
+    stage('PSR-2 Standards') {
+        sh 'vendor/bin/phpcs --standard=PSR2 ./src'
+    }
 }
